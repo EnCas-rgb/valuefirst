@@ -1,0 +1,26 @@
+{
+  "authors": [
+    {
+      "name": "encas",
+      "email": "sukamakan1010@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Lixus\\ValueFirst\\": "src/"
+    }
+  },
+  "description": "description",
+  "extra": {
+    "laravel": {}
+  },
+  "license": "proprietary",
+  "minimum-stability": "stable",
+  "name": "lixus/valuefirst",
+  "require": {
+    "php": "^7.2",
+    "illuminate/support": "^5.5|^6|^7",
+    "ext-curl": "*",
+    "ext-json": "*"
+  }
+}
