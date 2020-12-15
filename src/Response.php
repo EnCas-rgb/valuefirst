@@ -32,7 +32,13 @@ class Response
 
         $this->guid = Arr::get($response,"MESSAGEACK.GUID.GUID");
         $this->submitDate = new DateTime(Arr::get($response, "MESSAGEACK.GUID.SUBMITDATE"));
-        $this->errors = Arr::get($response, "MESSAGEACK.GUID.ERROR");
+
+        $errors = array_merge(
+            Arr::get($response, "MESSAGEACK.Err", []),
+            Arr::get($response, "MESSAGEACK.GUID.ERROR", [])
+        );
+
+        $this->errors = $errors;
     }
 
     /**
